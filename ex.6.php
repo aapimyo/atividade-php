@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 7</title>
+    <title>Exercício 6</title>
 </head>
 <body>
 <form method="get">
@@ -15,11 +15,15 @@ Número 2: <input type="number" name="n2"><br><br>
 if(isset($_GET["n1"]) && isset($_GET["n2"])){
     $n1 = $_GET["n1"];
     $n2 = $_GET["n2"];
-    $media = ($n1+$n2)/2;
 
-    if ($media <= 7) {
-        echo "A média das notas é: $media";
+    if ($n1 > $n2) {
+        echo "$n1 é maior que $n2.";
+    } elseif ($n1 == $n2) {
+        echo "$n1 e $n2 são iguais.";
+    } else {
+        echo "$n1 é menor que $n2.";
     }
+
 
 }
  ?>
